@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Nekoweb
-        uses: oceanthunder/deploy2nekoweb@v1.1
+        uses: mizufukawaaa/deploy2nekoweb@v1.1
         with:
           api_key: ${{ secrets.NEKOWEB_API_KEY }}
           dir: '.'
