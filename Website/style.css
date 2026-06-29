@@ -1,0 +1,70 @@
+body {
+    background-image: url('Images/P1059216.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.iceberg-canvas {
+    position: relative;
+    width: 1160px;
+    height: 790px;
+}
+
+.block {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);  
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.block:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.03);
+    z-index: 99;
+}
+
+.block span {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.box-1 { width: 93px; height: 93px; top: 388px; left: 229px; }
+.box-2 { width: 58px; height: 52px; top: 199px; left: 319px; }
+.box-3 { width: 55px; height: 111px; top: 129px; left: 392px; }
+.box-4 { width: 114px; height: 118px; top: 260px; left: 333px; }
+.box-5 { width: 259px; height: 154px; top: 396px; left: 332px; }
+.box-6 { width: 246px; height: 204px; top: 576px; left: 399px; }
+.box-7 { width: 172px; height: 135px; top: 146px; left: 462px; }
+.box-8 { width: 190px; height: 85px; top: 303px; left: 455px; }
+.box-9 { width: 64px; height: 129px; top: 402px; left: 603px; }
+.box-10 { width: 70px; height: 312px; top: 84px; left: 658px; }
+.box-11 { width: 151px; height: 29px; top: 422px; left: 693px; }
+.box-12 { width: 166px; height: 70px; top: 467px; left: 678px; }
+.box-13 { width: 250px; height: 104px; top: 550px; left: 658px; }
+.box-14 { width: 212px; height: 211px; top: 124px; left: 738px; }
+.box-15 { width: 66px; height: 66px; top: 346px; left: 738px; }
+.box-16 { width: 173px; height: 57px; top: 353px; left: 824px; }
+.box-17 { width: 314px; height: 103px; top: 434px; left: 869px; }
+.box-18 { width: 250px; height: 104px; top: 214px; left: 960px; }
+.box-19 { width: 125px; height: 99px; top: 328px; left: 1026px; }
