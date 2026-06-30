@@ -22,7 +22,7 @@
     <div class="block box-11"><span>Box 11</span></div>
     <div class="block box-12"><span>Box 12</span></div>
     <div class="block box-13"><span>Box 13</span></div>
-    <div class="block box-14"><span>Box 14</span></div>
+    <div class="block box-14"><span>temporary update log: July 1st: aesthetic update + zooom</span></div>
     <div class="block box-15"><span>Box 15</span></div>
     <div class="block box-16"><span>Box 16</span></div>
     <div class="block box-17"><span>Box 17</span></div>
@@ -31,8 +31,27 @@
   </div>
 
   <footer class="site-footer">
-    <p>How should i write something about myself? </p>
+    <p>how do one write something about themself?</p>
   </footer>
 
+  <script>
+    const canvas = document.querySelector('.iceberg-canvas');
+    let scale = 1;
+
+    window.addEventListener('wheel', (e) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+        
+        const zoomFactor = 0.05;
+        if (e.deltaY < 0) {
+          scale = Math.min(scale + zoomFactor, 2);
+        } else {
+          scale = Math.max(scale - zoomFactor, 0.4);
+        }
+
+        canvas.style.setProperty('--zoom-scale', scale);
+      }
+    }, { passive: false });
+  </script>
 </body>
 </html>

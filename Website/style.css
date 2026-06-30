@@ -1,29 +1,41 @@
 body {
-    background-image: url('Images/P1059216.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    overflow: auto; 
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('Images/P1059216-lowres-inverted.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .iceberg-canvas {
     position: relative;
-    width: 1160px;
-    height: 790px;
+    width: 1452px;
+    height: 948px;
+    margin: 100px;
+    --zoom-scale: 1;
+    zoom: var(--zoom-scale);
 }
 
 .block {
     position: absolute;
-    background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);  
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 10px 30px rgba(0, 0, 0, 0.4); 
     color: #ffffff;
     font-family: monospace;
     display: flex;
@@ -33,13 +45,17 @@ body {
     box-sizing: border-box;
     transition: all 0.3s ease;
     cursor: pointer;
+    background-image: url('Images/P1059216.jpg');
+    background-attachment: fixed;  
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
 }
 
 .block:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.6);
-    transform: scale(1.03);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 20px 45px rgba(0, 0, 0, 0.7);
     z-index: 99;
+    border-color: rgba(255, 255, 255, 0.9);
 }
 
 .block span {
@@ -49,22 +65,37 @@ body {
     text-align: center;
 }
 
-.box-1 { width: 93px; height: 93px; top: 388px; left: 229px; }
-.box-2 { width: 58px; height: 52px; top: 199px; left: 319px; }
-.box-3 { width: 55px; height: 111px; top: 129px; left: 392px; }
-.box-4 { width: 114px; height: 118px; top: 260px; left: 333px; }
-.box-5 { width: 259px; height: 154px; top: 396px; left: 332px; }
-.box-6 { width: 246px; height: 204px; top: 576px; left: 399px; }
-.box-7 { width: 172px; height: 135px; top: 146px; left: 462px; }
-.box-8 { width: 190px; height: 85px; top: 303px; left: 455px; }
-.box-9 { width: 64px; height: 129px; top: 402px; left: 603px; }
-.box-10 { width: 70px; height: 312px; top: 84px; left: 658px; }
-.box-11 { width: 151px; height: 29px; top: 422px; left: 693px; }
-.box-12 { width: 166px; height: 70px; top: 467px; left: 678px; }
-.box-13 { width: 250px; height: 104px; top: 550px; left: 658px; }
-.box-14 { width: 212px; height: 211px; top: 124px; left: 738px; }
-.box-15 { width: 66px; height: 66px; top: 346px; left: 738px; }
-.box-16 { width: 173px; height: 57px; top: 353px; left: 824px; }
-.box-17 { width: 314px; height: 103px; top: 434px; left: 869px; }
-.box-18 { width: 250px; height: 104px; top: 214px; left: 960px; }
-.box-19 { width: 125px; height: 99px; top: 328px; left: 1026px; }
+.box-1 { width: 112px; height: 112px; top: 466px; left: 1340px; }
+.box-2 { width: 70px; height: 62px; top: 239px; left: 1274px; }
+.box-3 { width: 66px; height: 133px; top: 155px; left: 1191px; }
+.box-4 { width: 137px; height: 142px; top: 312px; left: 1190px; }
+.box-5 { width: 311px; height: 185px; top: 475px; left: 1018px; }
+.box-6 { width: 295px; height: 245px; top: 691px; left: 953px; }
+.box-7 { width: 206px; height: 162px; top: 175px; left: 967px; }
+.box-8 { width: 228px; height: 102px; top: 364px; left: 953px; }
+.box-9 { width: 77px; height: 155px; top: 482px; left: 926px; }
+.box-10 { width: 84px; height: 374px; top: 101px; left: 853px; }
+.box-11 { width: 181px; height: 35px; top: 506px; left: 714px; }
+.box-12 { width: 199px; height: 84px; top: 560px; left: 714px; }
+.box-13 { width: 300px; height: 125px; top: 660px; left: 637px; }
+.box-14 { width: 254px; height: 253px; top: 149px; left: 587px; }
+.box-15 { width: 79px; height: 79px; top: 415px; left: 762px; }
+.box-16 { width: 208px; height: 68px; top: 424px; left: 530px; }
+.box-17 { width: 377px; height: 124px; top: 521px; left: 307px; }
+.box-18 { width: 300px; height: 125px; top: 257px; left: 275px; }
+.box-19 { width: 150px; height: 119px; top: 394px; left: 346px; }
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+        display: block !important; 
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .iceberg-canvas {
+        margin: 60px !important; 
+        top: auto !important;
+        left: auto !important;
+    }
+}
