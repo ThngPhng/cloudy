@@ -15,4 +15,4 @@ jobs:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'https://mizufukawaaa.nekoweb.org/'
           nekoweb-username: 'mizufukawaaa'
-          directory: 'website'
+          directory: 'Website'
